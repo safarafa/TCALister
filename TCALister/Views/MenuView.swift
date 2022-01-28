@@ -9,16 +9,25 @@ import SwiftUI
 import ComposableArchitecture
 
 struct MenuView: View {
+    let store: Store<MenuListState, MenuListAction> = Store(initialState: MenuListState(), reducer: MenuListReducer, environment: MenuListEnvironment())
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink("Dogs", destination: DogsListView(store: Store(
-                    initialState: DogsListState(),
-                    reducer: DogsListReducer,
-                    environment: DogsListEnvironment()
-                    )))
+        WithViewStore(self.store) { viewStore in
+            NavigationView {
+                ZStack {
+                    List {
+                        ForEach(viewStore.state.items, id: \.id) { item in
+                            NavigationLink(item.title, destination: item.destination())
+                        }
+                    }
+                    if viewStore.state.isLoading {
+                        ProgressView()
+                    }
+                }
+                .navigationTitle("Animals")
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
             }
-            .navigationTitle("Animals")
         }
     }
 }

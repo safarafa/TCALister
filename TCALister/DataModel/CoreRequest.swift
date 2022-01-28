@@ -35,7 +35,7 @@ class Requester {
         let _ = Task {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 okHandler([
-                    MenuItem(id: "1", title: "Dogs", pageId: TypeOfPages.dogs)])
+                    MenuItem(id: "1", title: "Dogs to adopt", pageId: TypeOfPages.dogs)])
             }
         }
     }
