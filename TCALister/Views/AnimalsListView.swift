@@ -17,7 +17,9 @@ struct AnimalsListView<T: RequestableItem> : View {
             ZStack {
                 List {
                     ForEach(viewStore.state.items, id: \.id) { item in
-                        itemView(item)
+                        NavigationLink(destination: ProcessStepView()) {
+                            itemView(item)
+                        }
                     }
                 }
                 .navigationTitle(viewStore.state.title)

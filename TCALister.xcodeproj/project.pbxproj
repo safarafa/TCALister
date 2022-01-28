@@ -20,6 +20,7 @@
 		40E1173A27A3F269001AAB98 /* AnimalsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173927A3F269001AAB98 /* AnimalsList.swift */; };
 		40E1173C27A3FD1F001AAB98 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173B27A3FD1F001AAB98 /* MenuList.swift */; };
 		40E1173E27A42969001AAB98 /* CatListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173D27A42969001AAB98 /* CatListItemView.swift */; };
+		40E1174027A437AD001AAB98 /* ProcessStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173F27A437AD001AAB98 /* ProcessStepView.swift */; };
 		696C104B6D799EEA43094C2D /* DogListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C1EE4358CE98772A64BC9 /* DogListItemView.swift */; };
 		696C13BF3AA5441EB2729FA3 /* Dog+RequestableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C1C71398F5D1BEB2A09D7 /* Dog+RequestableItem.swift */; };
 		696C1627A4C062623597471C /* Cat+RequestableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C15E01E16CFF3E3C231C1 /* Cat+RequestableItem.swift */; };
@@ -58,6 +59,7 @@
 		40E1173927A3F269001AAB98 /* AnimalsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsList.swift; sourceTree = "<group>"; };
 		40E1173B27A3FD1F001AAB98 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		40E1173D27A42969001AAB98 /* CatListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListItemView.swift; sourceTree = "<group>"; };
+		40E1173F27A437AD001AAB98 /* ProcessStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessStepView.swift; sourceTree = "<group>"; };
 		696C15E01E16CFF3E3C231C1 /* Cat+RequestableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cat+RequestableItem.swift"; sourceTree = "<group>"; };
 		696C1C71398F5D1BEB2A09D7 /* Dog+RequestableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dog+RequestableItem.swift"; sourceTree = "<group>"; };
 		696C1EE4358CE98772A64BC9 /* DogListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogListItemView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				40ABAE7B2794947800BDE61E /* AnimalsListView.swift */,
 				40E1173527A3EF57001AAB98 /* MenuView.swift */,
 				696C14711F5E378116CBDD1B /* ListItems */,
+				40E1173F27A437AD001AAB98 /* ProcessStepView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				40E1173627A3EF58001AAB98 /* MenuView.swift in Sources */,
 				40ABAE7A2794947800BDE61E /* TCAListerApp.swift in Sources */,
 				40E1173A27A3F269001AAB98 /* AnimalsList.swift in Sources */,
+				40E1174027A437AD001AAB98 /* ProcessStepView.swift in Sources */,
 				40E1173C27A3FD1F001AAB98 /* MenuList.swift in Sources */,
 				40ABAEA827949DD000BDE61E /* CoreRequest.swift in Sources */,
 				40E1173E27A42969001AAB98 /* CatListItemView.swift in Sources */,
