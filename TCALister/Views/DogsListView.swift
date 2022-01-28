@@ -8,11 +8,10 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ContentView: View {
-    let store: Store<AppState, AppAction>
+struct DogsListView: View {
+    let store: Store<DogsListState, DogsListAction>
     
     var body: some View {
-        NavigationView {
             WithViewStore(self.store) { viewStore in
                 ZStack {
                     List {
@@ -31,29 +30,30 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .navigationTitle("Animals")
+                    .navigationTitle("Dogs")
                     .onAppear { viewStore.send(.onAppear) }
                     if viewStore.state.isLoading {
                         ProgressView()
                     }
                 }
             }
-        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(
+        DogsListView(
             store: Store(
-                initialState: AppState(
+                initialState: DogsListState(
                     items:  [
-                        Animal(id: "1", title: "Item 1"),
-                        Animal(id: "2", title: "Item 2", subTitle: "Test")]),
-                reducer: appReducer,
-                environment: AppEnvironment()
+                        Dog(id: "1", title: "Dog 1"),
+                        Dog(id: "2", title: "Dog 2", subTitle: "Dalmatian")]),
+                reducer: DogsListReducer,
+                environment: DogsListEnvironment()
             )
         )
         
     }
 }
+
+

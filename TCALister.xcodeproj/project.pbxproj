@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40ABAE7A2794947800BDE61E /* TCAListerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE792794947800BDE61E /* TCAListerApp.swift */; };
-		40ABAE7C2794947800BDE61E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE7B2794947800BDE61E /* ContentView.swift */; };
+		40ABAE7C2794947800BDE61E /* DogsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE7B2794947800BDE61E /* DogsListView.swift */; };
 		40ABAE7E2794947C00BDE61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40ABAE7D2794947C00BDE61E /* Assets.xcassets */; };
 		40ABAE812794947C00BDE61E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40ABAE802794947C00BDE61E /* Preview Assets.xcassets */; };
 		40ABAE8B2794947C00BDE61E /* TCAListerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE8A2794947C00BDE61E /* TCAListerTests.swift */; };
@@ -16,6 +16,8 @@
 		40ABAE972794947D00BDE61E /* TCAListerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE962794947D00BDE61E /* TCAListerUITestsLaunchTests.swift */; };
 		40ABAEA52794953A00BDE61E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 40ABAEA42794953A00BDE61E /* ComposableArchitecture */; };
 		40ABAEA827949DD000BDE61E /* CoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAEA727949DD000BDE61E /* CoreRequest.swift */; };
+		40E1173627A3EF58001AAB98 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173527A3EF57001AAB98 /* MenuView.swift */; };
+		40E1173A27A3F269001AAB98 /* DogsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173927A3F269001AAB98 /* DogsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 /* Begin PBXFileReference section */
 		40ABAE762794947800BDE61E /* TCALister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCALister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40ABAE792794947800BDE61E /* TCAListerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAListerApp.swift; sourceTree = "<group>"; };
-		40ABAE7B2794947800BDE61E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40ABAE7B2794947800BDE61E /* DogsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsListView.swift; sourceTree = "<group>"; };
 		40ABAE7D2794947C00BDE61E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40ABAE802794947C00BDE61E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40ABAE862794947C00BDE61E /* TCAListerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCAListerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,8 @@
 		40ABAE942794947D00BDE61E /* TCAListerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAListerUITests.swift; sourceTree = "<group>"; };
 		40ABAE962794947D00BDE61E /* TCAListerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAListerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		40ABAEA727949DD000BDE61E /* CoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRequest.swift; sourceTree = "<group>"; };
+		40E1173527A3EF57001AAB98 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		40E1173927A3F269001AAB98 /* DogsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +102,10 @@
 		40ABAE782794947800BDE61E /* TCALister */ = {
 			isa = PBXGroup;
 			children = (
-				40ABAEA627949D4000BDE61E /* Model */,
+				40E1173827A3F115001AAB98 /* Logic */,
+				40E1173727A3F0E7001AAB98 /* Views */,
+				40ABAEA627949D4000BDE61E /* DataModel */,
 				40ABAE792794947800BDE61E /* TCAListerApp.swift */,
-				40ABAE7B2794947800BDE61E /* ContentView.swift */,
 				40ABAE7D2794947C00BDE61E /* Assets.xcassets */,
 				40ABAE7F2794947C00BDE61E /* Preview Content */,
 			);
@@ -132,12 +137,29 @@
 			path = TCAListerUITests;
 			sourceTree = "<group>";
 		};
-		40ABAEA627949D4000BDE61E /* Model */ = {
+		40ABAEA627949D4000BDE61E /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				40ABAEA727949DD000BDE61E /* CoreRequest.swift */,
 			);
-			path = Model;
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		40E1173727A3F0E7001AAB98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40ABAE7B2794947800BDE61E /* DogsListView.swift */,
+				40E1173527A3EF57001AAB98 /* MenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40E1173827A3F115001AAB98 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				40E1173927A3F269001AAB98 /* DogsList.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40ABAE7C2794947800BDE61E /* ContentView.swift in Sources */,
+				40ABAE7C2794947800BDE61E /* DogsListView.swift in Sources */,
+				40E1173627A3EF58001AAB98 /* MenuView.swift in Sources */,
 				40ABAE7A2794947800BDE61E /* TCAListerApp.swift in Sources */,
+				40E1173A27A3F269001AAB98 /* DogsList.swift in Sources */,
 				40ABAEA827949DD000BDE61E /* CoreRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +471,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,6 +501,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
