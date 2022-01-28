@@ -40,7 +40,7 @@ class Requester {
         }
     }
     
-    static func requestItems(okHandler: @escaping ([Dog]) -> Void) {
+    static func requestDogs(okHandler: @escaping ([Dog]) -> Void) {
         let _ = Task {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 okHandler([

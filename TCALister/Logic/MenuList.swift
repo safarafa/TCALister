@@ -10,11 +10,11 @@ import SwiftUI
 import ComposableArchitecture
 
 struct MenuListState: Equatable {
-    
-    static func == (lhs: MenuListState, rhs: MenuListState) -> Bool {
+
+    static func ==(lhs: MenuListState, rhs: MenuListState) -> Bool {
         lhs.items == rhs.items
     }
-    
+
     var items: [MenuItem] = []
     var isLoading = true
 }
@@ -25,13 +25,13 @@ enum MenuListAction {
 }
 
 struct MenuListEnvironment {
-    
+
 }
 
 let MenuListReducer = Reducer<MenuListState, MenuListAction, MenuListEnvironment> { state, action, environment in
-    switch action  {
+    switch action {
     case .onAppear:
-        return .future{ callback in
+        return .future { callback in
             Requester.requestMenuItems() { data in
                 callback(.success(.onDataReceive(data)))
             }
@@ -44,10 +44,12 @@ let MenuListReducer = Reducer<MenuListState, MenuListAction, MenuListEnvironment
 }
 
 extension MenuItem {
-    
-    func destination() -> DogsListView { DogsListView(store: Store(
-        initialState: DogsListState(),
-        reducer: DogsListReducer,
-        environment: DogsListEnvironment()))
+
+    func destination() -> AnimalsListView {
+        AnimalsListView(store: Store(
+                initialState: AnimalsListState<Dog>(title: "Dogs"),
+                reducer: AnimalsListReducer<Dog>.reducer(),
+                environment: AnimalsListEnvironment()
+        ))
     }
 }

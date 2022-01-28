@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40ABAE7A2794947800BDE61E /* TCAListerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE792794947800BDE61E /* TCAListerApp.swift */; };
-		40ABAE7C2794947800BDE61E /* DogsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE7B2794947800BDE61E /* DogsListView.swift */; };
+		40ABAE7C2794947800BDE61E /* AnimalsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE7B2794947800BDE61E /* AnimalsListView.swift */; };
 		40ABAE7E2794947C00BDE61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40ABAE7D2794947C00BDE61E /* Assets.xcassets */; };
 		40ABAE812794947C00BDE61E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40ABAE802794947C00BDE61E /* Preview Assets.xcassets */; };
 		40ABAE8B2794947C00BDE61E /* TCAListerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAE8A2794947C00BDE61E /* TCAListerTests.swift */; };
@@ -17,8 +17,10 @@
 		40ABAEA52794953A00BDE61E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 40ABAEA42794953A00BDE61E /* ComposableArchitecture */; };
 		40ABAEA827949DD000BDE61E /* CoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAEA727949DD000BDE61E /* CoreRequest.swift */; };
 		40E1173627A3EF58001AAB98 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173527A3EF57001AAB98 /* MenuView.swift */; };
-		40E1173A27A3F269001AAB98 /* DogsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173927A3F269001AAB98 /* DogsList.swift */; };
+		40E1173A27A3F269001AAB98 /* AnimalsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173927A3F269001AAB98 /* AnimalsList.swift */; };
 		40E1173C27A3FD1F001AAB98 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E1173B27A3FD1F001AAB98 /* MenuList.swift */; };
+		696C104B6D799EEA43094C2D /* DogListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C1EE4358CE98772A64BC9 /* DogListItemView.swift */; };
+		696C13BF3AA5441EB2729FA3 /* Dog+RequestableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696C1C71398F5D1BEB2A09D7 /* Dog+RequestableItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,7 @@
 /* Begin PBXFileReference section */
 		40ABAE762794947800BDE61E /* TCALister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCALister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40ABAE792794947800BDE61E /* TCAListerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAListerApp.swift; sourceTree = "<group>"; };
-		40ABAE7B2794947800BDE61E /* DogsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsListView.swift; sourceTree = "<group>"; };
+		40ABAE7B2794947800BDE61E /* AnimalsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListView.swift; sourceTree = "<group>"; };
 		40ABAE7D2794947C00BDE61E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40ABAE802794947C00BDE61E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40ABAE862794947C00BDE61E /* TCAListerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCAListerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,8 +53,10 @@
 		40ABAE962794947D00BDE61E /* TCAListerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAListerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		40ABAEA727949DD000BDE61E /* CoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreRequest.swift; sourceTree = "<group>"; };
 		40E1173527A3EF57001AAB98 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		40E1173927A3F269001AAB98 /* DogsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsList.swift; sourceTree = "<group>"; };
+		40E1173927A3F269001AAB98 /* AnimalsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsList.swift; sourceTree = "<group>"; };
 		40E1173B27A3FD1F001AAB98 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		696C1C71398F5D1BEB2A09D7 /* Dog+RequestableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dog+RequestableItem.swift"; sourceTree = "<group>"; };
+		696C1EE4358CE98772A64BC9 /* DogListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				40ABAEA727949DD000BDE61E /* CoreRequest.swift */,
+				696C1236747730C7C8E2F0CA /* Extensions */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -150,8 +155,9 @@
 		40E1173727A3F0E7001AAB98 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				40ABAE7B2794947800BDE61E /* DogsListView.swift */,
+				40ABAE7B2794947800BDE61E /* AnimalsListView.swift */,
 				40E1173527A3EF57001AAB98 /* MenuView.swift */,
+				696C14711F5E378116CBDD1B /* ListItems */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,10 +165,26 @@
 		40E1173827A3F115001AAB98 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				40E1173927A3F269001AAB98 /* DogsList.swift */,
+				40E1173927A3F269001AAB98 /* AnimalsList.swift */,
 				40E1173B27A3FD1F001AAB98 /* MenuList.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		696C1236747730C7C8E2F0CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				696C1C71398F5D1BEB2A09D7 /* Dog+RequestableItem.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		696C14711F5E378116CBDD1B /* ListItems */ = {
+			isa = PBXGroup;
+			children = (
+				696C1EE4358CE98772A64BC9 /* DogListItemView.swift */,
+			);
+			path = ListItems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,12 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40ABAE7C2794947800BDE61E /* DogsListView.swift in Sources */,
+				40ABAE7C2794947800BDE61E /* AnimalsListView.swift in Sources */,
 				40E1173627A3EF58001AAB98 /* MenuView.swift in Sources */,
 				40ABAE7A2794947800BDE61E /* TCAListerApp.swift in Sources */,
-				40E1173A27A3F269001AAB98 /* DogsList.swift in Sources */,
+				40E1173A27A3F269001AAB98 /* AnimalsList.swift in Sources */,
 				40E1173C27A3FD1F001AAB98 /* MenuList.swift in Sources */,
 				40ABAEA827949DD000BDE61E /* CoreRequest.swift in Sources */,
+				696C13BF3AA5441EB2729FA3 /* Dog+RequestableItem.swift in Sources */,
+				696C104B6D799EEA43094C2D /* DogListItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
