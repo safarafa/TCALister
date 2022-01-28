@@ -45,11 +45,19 @@ let MenuListReducer = Reducer<MenuListState, MenuListAction, MenuListEnvironment
 
 extension MenuItem {
 
-    func destination() -> AnimalsListView {
-        AnimalsListView(store: Store(
-                initialState: AnimalsListState<Dog>(title: "Dogs"),
-                reducer: AnimalsListReducer<Dog>.reducer(),
+    func destination() -> AnyView {
+        if pageId == .dogs {
+            return AnyView(AnimalsListView(store: Store(
+                    initialState: AnimalsListState<Dog>(title: "Dogs"),
+                    reducer: AnimalsListReducer<Dog>.reducer(),
+                    environment: AnimalsListEnvironment()
+            ), itemView: { AnyView(DogListItemView(dog: $0)) }))
+        }
+        return AnyView(AnimalsListView(store: Store(
+                initialState: AnimalsListState<Cat>(title: "Cats"),
+                reducer: AnimalsListReducer<Cat>.reducer(),
                 environment: AnimalsListEnvironment()
-        ))
+        ), itemView: { AnyView(CatListItemView(cat: $0)) }))
+        
     }
 }

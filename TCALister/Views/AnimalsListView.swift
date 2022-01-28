@@ -8,15 +8,16 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct AnimalsListView: View {
-    let store: Store<AnimalsListState<Dog>, AnimalsListAction<Dog>>
+struct AnimalsListView<T: RequestableItem> : View {
+    let store: Store<AnimalsListState<T>, AnimalsListAction<T>>
+    let itemView: (T) -> AnyView
     
     var body: some View {
         WithViewStore(self.store) { viewStore in
             ZStack {
                 List {
                     ForEach(viewStore.state.items, id: \.id) { item in
-                        DogListItemView(dog: item)
+                        itemView(item)
                     }
                 }
                 .navigationTitle(viewStore.state.title)

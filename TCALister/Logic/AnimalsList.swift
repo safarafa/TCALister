@@ -7,8 +7,10 @@
 
 import Foundation
 import ComposableArchitecture
+import SwiftUI
 
 protocol RequestableItem: Equatable {
+    var id: String { get }
     static func request(okHandler: @escaping ([Self]) -> Void)
 }
 
