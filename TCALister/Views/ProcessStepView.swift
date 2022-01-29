@@ -11,72 +11,46 @@ import ComposableArchitecture
 struct ProcessStepView: View {
     let store: Store<AdoptionProcessState, AdoptionProcessAction> = Store(initialState: AdoptionProcessState(),
                                                                           reducer: adoptionProcessReducer,
-                                                                          environment: AdoptionProcessEnvirontment())
+                                                                          environment: AdoptionProcessEnvironment())
     var body: some View {
         WithViewStore(self.store) { viewStore in
             VStack(alignment: .leading) {
-                Spacer()
                 Text(viewStore.state.headerText)
                     .font(.title2)
+                    .padding(.top)
+                    .foregroundColor(.white)
                 Text(viewStore.state.descriptionText)
-                List {
+                    .foregroundColor(.white)
+                Spacer()
                     ForEach(viewStore.state.steps, id: \.stepNo) { item in
                         HStack {
                             Image(systemName: item.stepNo.description + ".circle")
                                 .font(.title)
-                                .foregroundColor(viewStore.state.currentStep == item.stepNo ? .black : .gray)
+                                .foregroundColor(.white)
                             VStack(alignment: .leading) {
                                 Text(item.title)
                                     .font(.title2)
-                                    .foregroundColor(viewStore.state.currentStep == item.stepNo ? .black : .gray)
-                                if viewStore.state.currentStep == item.stepNo {
+                                    .foregroundColor(.white)
+                                if item.active {
                                     Text(item.description)
+                                        .foregroundColor(.white)
                                 }
                             }
                         }
+                        .padding(.bottom)
+                        .opacity(item.active ? 1.0 : 0.7)
                     }
-                }
-                .listStyle(.plain)
-                Text("Let's begin!")
-                    .font(.title)
-                    .padding()
-                    .background(Color.accentColor)
                 Spacer()
+                PrimaryBigWhiteButton(title: "Let's begin!") {
+                    viewStore.send(.beginTapped)
+                }
             }
             .padding()
+            .navigationBarHidden(true)
+            .background(Color.accentColor
+                            .ignoresSafeArea()
+                        )
         }        
     }
 }
 
-struct AdoptionProcessStep {
-    let stepNo: Int
-    let title: String
-    let description: String
-}
-
-struct AdoptionProcessState: Equatable {
-    let headerText = "Let the adoption process begin!"
-    let descriptionText = "You will have to fill some forms."
-    var currentStep = 1
-    let steps: [AdoptionProcessStep] = [
-        AdoptionProcessStep(stepNo: 1, title: "Phone number", description: "On this step we need you to input your phone number. We will send you SMS to confirm that you are an owner of this number."),
-        AdoptionProcessStep(stepNo: 2, title:"Number confirmation", description: "On this step you input SMS code, which was sent to you."),
-        AdoptionProcessStep(stepNo: 3, title: "PIN", description: "On this step you set PIN, which is later used to pick up adopted animal.")
-    ]
-    
-    static func == (lhs: AdoptionProcessState, rhs: AdoptionProcessState) -> Bool {
-        lhs.headerText == rhs.headerText
-    }
-}
-
-enum AdoptionProcessAction {
-    
-}
-
-struct AdoptionProcessEnvirontment {
-    
-}
-
-let adoptionProcessReducer = Reducer<AdoptionProcessState, AdoptionProcessAction, AdoptionProcessEnvirontment> { state, action, environment in
-    return .none
-}

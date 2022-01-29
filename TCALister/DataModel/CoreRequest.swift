@@ -46,7 +46,7 @@ class Requester {
 
     static func requestMenuItems(okHandler: @escaping ([MenuItem]) -> Void) {
         let _ = Task {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 okHandler([
                               MenuItem(id: "1", title: "Dogs to adopt", pageId: .dogs),
                               MenuItem(id: "2", title: "Cats to adopt", pageId: .cats)])
@@ -56,7 +56,7 @@ class Requester {
 
     static func requestDogs(okHandler: @escaping ([Dog]) -> Void) {
         let _ = Task {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 okHandler([
                               Dog(id: "1", title: "Dalmatian"),
                               Dog(id: "2", title: "Bulldog"),
