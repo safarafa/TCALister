@@ -12,28 +12,17 @@ struct PhoneNumberForm: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                HStack {
-                    Text("Please input your phone number")
-                    Spacer()
-                    Image(systemName: "checkmark.square")
-                        .foregroundColor(.success)
-                        .font(.title2)
-                }
-                TextField("", text: $phoneNumber)
-                    .padding()
-                    .background(Color.white)
-                Text("Too few digits")
-                    .foregroundColor(.error)
-                    .font(.caption)
+                FormTextField(title: "Please input your phone number",
+                              validationText: "Phone number should have 9 digits")
                 Spacer()
-                PrimaryBigDarkButton(title: "Dalej") {
-                
+                PrimaryBigDarkButton(title: "Next") {
+
                 }
             }
-            .padding()
-            .navigationTitle("Phone number")
-            .background(Color.lessIntense
-                            .ignoresSafeArea())
+                    .padding()
+                    .navigationTitle("Phone number")
+                    .background(Color.lessIntense
+                                        .ignoresSafeArea())
         }
     }
 }
